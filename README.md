@@ -2,7 +2,6 @@
 
 <p align="center"> 一个laravel weather扩展包</p>
 
-[![Test](https://github.com/serverking/weather/actions/workflows/test.yml/badge.svg)](https://github.com/serverking/weather/actions/workflows/test.yml) 
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](https://github.com/serverking/weather/actions/workflows/test.yml)
 [![Latest Stable Version](http://poser.pugx.org/serverking/weather/v/stable.svg)](https://packagist.org/packages/serverking/weather) [![Total Downloads](http://poser.pugx.org/serverking/weather/downloads)](https://packagist.org/packages/serverking/weather)
 [![Latest Unstable Version](https://poser.pugx.org/serverking/weather/v/unstable.svg)](https://packagist.org/packages/serverking/weather)
