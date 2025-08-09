@@ -9,7 +9,10 @@ class WeatherTest extends TestCase
 {
     public function testGetWeatherWithInvalidType()
     {
-        $w = Weather::getWeather('110101','base');
+        $key = 'd20f414e81cb35b8d1ec18ed2c49ca18';
+
+        $weather = new Weather($key);
+        $w = $weather->getWeather('110101','base');
         //断言会抛出此类异常类
         //$this->expectException(InvalidArgumentException::class);
         //断言
