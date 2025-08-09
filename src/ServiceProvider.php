@@ -17,15 +17,15 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function register()
     {
         $this->app->singleton(Weather::class, function(){
-            return new Weather(config('services.weather.key'));
+            return new Weather(config('weathers.weather.key'));
         });
 
         $this->app->alias(Weather::class, 'weather');
 
-        
+
 
         // 合并配置文件到 Laravel 的配置中心
-        $this->mergeConfigFrom(__DIR__ . '/../config/services.php', 'services');
+        $this->mergeConfigFrom(__DIR__ . '/../config/weathers.php', 'weathers');
     }
 
     /**
@@ -36,8 +36,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/services.php' => config_path('services.php'),
-        ], 'services');
+            __DIR__ . '/../config/weathers.php' => config_path('weathers.php'),
+        ], 'weathers');
 
         return [Weather::class, 'weather'];
 

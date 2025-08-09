@@ -38,7 +38,6 @@ class Weather{
             $response = $res->getBody()->getContents();
             return $format == 'json' ? json_decode($response, true) : $response;
         }catch (\Exception $e){
-            //return $e->getMessage();exit;
             throw new HttpException($e->getMessage(), $e->getCode());
         }
     }
