@@ -13,6 +13,30 @@ class Weather{
         $this->key = $key;
     }
 
+    /**
+     * 获取实时天气
+     * @param $city
+     * @param $format
+     * @return mixed|string
+     * @throws HttpException
+     * @throws InvalidArgumentException
+     */
+    public function getWeatherLive($city='110101',$format='json'){
+        return $this->getWeather($city,'base',$format);
+    }
+
+    /**
+     * 获取天气预报
+     * @param $city
+     * @param $format
+     * @return mixed|string
+     * @throws HttpException
+     * @throws InvalidArgumentException
+     */
+    public function getWeatherForecast($city='110101',$format='json'){
+        return $this->getWeather($city,'all',$format);
+    }
+
     public function getWeather($city='110101',$type='base',$format='json'){
 
         if(!in_array($format, ['json', 'xml'])){

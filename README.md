@@ -8,9 +8,9 @@
 ```language
 	composer require serverking/weather -vvv
 ```
-### 2、发布配置文件,运行如下命令后会生成/config/services.php配置文件
+### 2、发布配置文件,运行如下命令后会生成/config/weathers.php配置文件
 ```language
-php artisan vendor:publish --provider="Serverking\Weather\ServiceProvider" --tag="services"
+php artisan vendor:publish --provider="Serverking\Weather\ServiceProvider" --tag="weathers"
 
 ```
 
