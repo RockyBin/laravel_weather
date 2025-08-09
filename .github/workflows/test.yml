@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Install Dependencies
-      run: composer update --prefer-dist --no-interaction --no-suggest --prefer-${{ matrix.perfer }}
+      run: composer update --prefer-dist --no-interaction --no-suggest
     - name: Run PHPUnit
       run: ./vendor/bin/phpunit
